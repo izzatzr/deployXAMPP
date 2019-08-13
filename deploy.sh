@@ -22,7 +22,7 @@ else
 fi
 docker pull tomsik68/xampp
 docker run -it -d --name $2 tomsik86/xampp
-docker cp $1 $2:/www/
+docker cp $1 $2:/opt/lampp/htdocs/
 docker commit $2 $2
 docker tag $2 $3
 docker push $2
@@ -32,3 +32,4 @@ devspace init
 devspac create $2
 devspace use $2
 devspace deploy
+devspace open
